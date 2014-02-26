@@ -92,7 +92,7 @@ class Parser
     public function setPath($path)
     {
         // should parse message incrementally from file
-        $this->resource = mailparse_msg_parse_file($path);
+        $this->resource = \mailparse_msg_parse_file($path);
         $this->stream = fopen($path, 'r');
         $this->parse();
         return $this;
